@@ -44,7 +44,7 @@ const Page: NextPage<Props> = ({ pokemonData }) => {
           <ul>
           {
             pokemonData.map(pokemon => (
-              <li><Link href={{pathname: `/posts/${pokemon.name}`}}>{pokemon.name}</Link></li>
+              <li key={pokemon.name}><Link href={{pathname: `/posts/${pokemon.name}`}}>{pokemon.name}</Link></li>
             ))
           }
           </ul>
